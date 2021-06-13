@@ -1,2 +1,3 @@
 # webc
-Bring the holy C to the web
+
+Bring the best language (C) to the web
