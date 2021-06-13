@@ -3,22 +3,21 @@
 #define WEBC_UTILS_HEADER
 
 /* Growable string. */
-struct gs_t
-{
-	unsigned int len; /* Including the null terminator. */
-	unsigned int cap;
-	char* str;
+struct gs_t {
+  unsigned int len; /* Including the null terminator. */
+  unsigned int cap;
+  char *str;
 };
 typedef struct gs_t gs_t;
 
 /* Initializes the given uninitialized growable string to an empty string. */
-void gs_init(gs_t* gs);
+void gs_init(gs_t *gs);
 
 /* Cleans up the given growable string, leaving garbage values. */
-void gs_cleanup(gs_t* gs);
+void gs_cleanup(gs_t *gs);
 
 /* Appends the printf-formatted arguments to the given growable string. */
-void gs_append_f(gs_t* gs, const char* format, ...);
+void gs_append_f(gs_t *gs, const char *format, ...);
 
 /* Growable string use example:
  *   gs_t gs;
@@ -37,7 +36,7 @@ void gs_append_f(gs_t* gs, const char* format, ...);
 /* Checks the given growable string for memory corruptions,
  * returns -1 if an inconsistency is detected,
  * returns 0 if it seems ok. */
-int gs_check(const gs_t* gs);
+int gs_check(const gs_t *gs);
 
 #ifndef WEBC_GS_GROWTH_ADD
 /* See the gs_append_f implementation. */
