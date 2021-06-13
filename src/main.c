@@ -4,6 +4,7 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include "utils.h"
 
 #define CSTAR(adr) ((const struct sockaddr *)&adr)
 #define STAR(adr) ((struct sockaddr *)&adr)
