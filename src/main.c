@@ -67,9 +67,8 @@ int main(int argc, char const *argv[]) {
                  "Date: unknown\n"
                  "Content-Type: text/html; charset=UTF-8\n"
                  "Content-Length: 200\n"
-                 "Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT\n"
-                 "Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)\n"
-                 "ETag: \"3f80f-1b6-3e1cb03b\"\n"
+                 "Last-Modified: unknown\n"
+                 "Server: Webc\n"
                  "Accept-Ranges: bytes\n"
                  "Connection: close\n\n"
                  "<html lang =\"fr\">"
@@ -77,7 +76,7 @@ int main(int argc, char const *argv[]) {
                  "<meta charset = \"utf-8\">"
                  "<title>Webc</title>"
                  "</head>"
-                 "<body> Hello There </body>"
+                 "<body>Hello There</body>"
                  "</html>";
     res = send(client_socket, page, strlen(page), 0);
     if (res < 0) {
