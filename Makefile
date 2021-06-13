@@ -17,7 +17,8 @@ SRC= $(wildcard src/*.c)
 OBJ= $(patsubst %.c,%.o,$(subst src/,$(BUILD_FOLDER),$(SRC)))
 
 
-all: 
+all:
+	@mkdir -p build
 ifeq ($(DEBUG),yes)
 	@echo "Generating in debug mode"
 else
