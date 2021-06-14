@@ -3,13 +3,13 @@
 
 #include "buff.h"
 
-typedef Webio;
+typedef struct Webio_s *Webio;
 
 /**
  * @brief Allocate a new WebIO object
  *
  */
-void new_webio();
+Webio new_webio();
 
 /**
  * @brief Open a WebIO interface
